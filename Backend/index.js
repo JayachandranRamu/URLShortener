@@ -31,11 +31,11 @@ app.get("/:url",async(req,res)=>{
     const {url}=req.params;
 
     
-    
+
         const IsPresent=await LinkModel.findOne({ShortenedUrl:url})
      
         if(IsPresent){
-            if(IsPresent.createdAt<Date()){
+            if(IsPresent.createdAt>Date()){
   
                 res.status(200).redirect(IsPresent.RedirectedUrl);
             }else{
