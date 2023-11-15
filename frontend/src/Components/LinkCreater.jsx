@@ -58,7 +58,7 @@ let url="https://url-shortener-jsff.onrender.com/";
         name="url"
         value={longUrl}
         onChange={(e) => setLongUrl( e.target.value )}
-        required
+       isRequired
       ></Input>
       <Input
 
@@ -67,7 +67,7 @@ let url="https://url-shortener-jsff.onrender.com/";
         placeholder="Enter Your Short Url Endpoint"
         value={shortUrl}
         onChange={(e) => setShortUrl(e.target.value )}
-        required
+        isRequired
       ></Input>
       <Button display={"block"} m={"10px auto"} w={"30%"} onClick={HandleSubmit}>GENERATE LINK</Button>
       </Box>
